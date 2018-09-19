@@ -1,0 +1,195 @@
+.header-menu {
+  display: none;
+}
+
+.header-info .image-big {
+  display: none;
+}
+
+header div {
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background-color: rgba(123, 91, 179, 0.85);
+  height: 100px;
+}
+
+h1 {
+  font-size: 22px;
+  padding-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+h2, h4, p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 90px;
+}
+.header-info h1 {
+  font-size: 35px;
+  padding-bottom: 0;
+  margin: 0;
+}
+.header-info h2 {
+  padding-bottom: 5px;
+}
+.header-info .image-small {
+  border-radius: 50%;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.header-info div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.header-info h2 {
+  margin-top: 0;
+  color: black;
+}
+
+div.about-me {
+  display: flex;
+  background-color: #dedede;
+  height: 220px;
+  padding: 140px 30px;
+}
+div.about-me .about-me-content {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 250px;
+}
+div.about-me .about-me-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 60px;
+  width: 300px;
+}
+div.about-me img {
+  width: 13%;
+}
+
+div.projects {
+  display: flex;
+  padding: 140px 30px;
+  flex-direction: column;
+}
+div.projects h1 {
+  text-align: center;
+}
+div.projects .card:nth-of-type(1) {
+  align-self: center;
+}
+div.projects .card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 14.75px;
+}
+div.projects .card {
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 90%;
+  border-radius: 5px;
+  margin: 15px;
+}
+div.projects .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+div.projects img {
+  display: block;
+  padding-bottom: 0;
+  border-radius: 5px 5px 0px 0px;
+  width: 100%;
+}
+div.projects .container {
+  background-color: rgba(123, 91, 179, 0.3);
+  border-radius: 0px 0px 5px 5px;
+  padding: 2px 16px;
+}
+
+div.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(123, 91, 179, 0.85);
+  color: white;
+  padding: 140px 25px;
+  height: 166px;
+}
+div.skills img {
+  width: 13%;
+}
+div.skills img:nth-of-type(3) {
+  width: 11%;
+}
+div.skills .skills-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 60px;
+  width: 350px;
+}
+
+div.contact {
+  display: flex;
+  background-color: #dedede;
+  flex-direction: column;
+  align-items: center;
+  padding: 140px 25px;
+}
+div.contact img {
+  width: 13%;
+}
+div.contact .contact-icons {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  height: 60px;
+  width: 350px;
+}
+
+@media (min-width: 700px) {
+  div.about-me {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  div.about-me .about-me-content {
+    width: 550px;
+  }
+  div.about-me img {
+    height: 100%;
+  }
+
+  div.projects {
+    align-items: center;
+  }
+  div.projects .card-container {
+    flex-direction: row;
+    width: 690px;
+  }
+  div.projects .card {
+    width: 70%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
