@@ -15,14 +15,13 @@ header {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  background-color: rgba(123, 91, 179, 0.85);
+  background-color: rgba(68, 44, 100, 0.85);
   height: 100px;
 }
 
 h1 {
   font-size: 22px;
-  padding-bottom: 20px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 
 h2 {
@@ -30,7 +29,7 @@ h2 {
 }
 
 h2, h4, p {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .header-info {
@@ -38,50 +37,50 @@ h2, h4, p {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  margin-top: 90px;
+  margin-top: 70px;
 }
 .header-info h1 {
-  font-size: 35px;
-  padding-bottom: 0;
+  font-size: 30px;
   margin: 0;
+  padding-bottom: 5px;
+  padding-top: 10px;
 }
 .header-info h2 {
-  padding-bottom: 5px;
+  padding-bottom: 0px;
+  color: black;
+  margin: 0;
 }
 .header-info .image-small {
   border-radius: 50%;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 0px;
 }
 .header-info div {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
-.header-info h2 {
-  margin-top: 0;
-  color: black;
-}
 
 div.about-me {
   display: flex;
   background-color: #dedede;
   height: 220px;
-  padding: 140px 30px;
-}
-div.about-me .about-me-content {
-  display: flex;
-  text-align: center;
+  padding: 60px 30px;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  text-align: justify;
   align-items: center;
-  height: 250px;
+}
+div.about-me p {
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
 }
 div.about-me .about-me-icons {
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  justify-content: space-evenly;
   height: 60px;
-  width: 300px;
+  width: 350px;
 }
 div.about-me img {
   width: 13%;
@@ -89,7 +88,7 @@ div.about-me img {
 
 div.projects {
   display: flex;
-  padding: 140px 30px;
+  padding: 60px 30px;
   flex-direction: column;
 }
 div.projects h1 {
@@ -121,7 +120,7 @@ div.projects img {
   width: 100%;
 }
 div.projects .container {
-  background-color: rgba(123, 91, 179, 0.3);
+  background-color: rgba(68, 44, 100, 0.3);
   border-radius: 0px 0px 5px 5px;
   padding: 2px 16px;
 }
@@ -130,10 +129,11 @@ div.skills {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(123, 91, 179, 0.85);
+  background-color: rgba(68, 44, 100, 0.85);
   color: white;
-  padding: 140px 25px;
+  padding: 100px 30px;
   height: 166px;
+  justify-content: space-between;
 }
 div.skills img {
   width: 13%;
@@ -143,31 +143,45 @@ div.skills img:nth-of-type(3) {
 }
 div.skills .skills-icons {
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  justify-content: space-evenly;
   height: 60px;
   width: 350px;
 }
 
 div.contact {
   display: flex;
-  background-color: #dedede;
   flex-direction: column;
   align-items: center;
-  padding: 140px 25px;
+  background-color: #dedede;
+  padding: 100px 30px;
+  height: 166px;
+  justify-content: space-between;
 }
 div.contact img {
   width: 13%;
 }
 div.contact .contact-icons {
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
+  justify-content: space-evenly;
   height: 60px;
   width: 350px;
+  padding-top: 34px;
 }
 
 @media (min-width: 700px) {
+  header {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-info {
+    justify-content: space-evenly;
+    width: auto;
+  }
+  .header-info h1 {
+    font-size: 45px;
+  }
+
   div.about-me {
     justify-content: center;
     align-items: center;
@@ -178,6 +192,9 @@ div.contact .contact-icons {
   }
   div.about-me img {
     height: 100%;
+  }
+  div.about-me p {
+    width: 50%;
   }
 
   div.projects {
