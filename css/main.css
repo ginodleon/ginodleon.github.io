@@ -1,3 +1,51 @@
+div.tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(68, 44, 100, 0.85);
+  color: white;
+  padding: 60px 30px;
+  justify-content: space-between;
+}
+div.tech h1 {
+  margin-bottom: 24px;
+  margin-top: 0px;
+}
+div.tech img {
+  width: 13%;
+}
+div.tech img:nth-of-type(3) {
+  width: 11%;
+}
+div.tech .tech-icons {
+  display: flex;
+  justify-content: space-evenly;
+  height: 60px;
+  width: 350px;
+}
+div.tech p {
+  align-self: flex-start;
+}
+
+.projects {
+  align-items: center;
+}
+.projects .project-img {
+  width: 315px;
+  box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+@media (min-width: 700px) {
+  .project-wrapper p {
+    width: 639px;
+  }
+
+  .projects .project-img {
+    width: 500px;
+  }
+}
 .header-menu {
   display: none;
 }
@@ -10,22 +58,36 @@ header div {
   color: white;
 }
 
+a {
+  text-decoration: none;
+  /* no underline */
+}
+
+a:visited {
+  color: white;
+}
+
 header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   background-color: rgba(68, 44, 100, 0.85);
   height: 100px;
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 27px;
   font-family: "Roboto Slab", serif;
 }
 
 h2 {
   font-size: 14px;
+}
+
+p {
+  margin: 24px 0px 24px 0px;
+  line-height: 1.6;
 }
 
 h2, h4, p {
@@ -36,7 +98,7 @@ h2, h4, p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  width: 400px;
   margin-top: 70px;
 }
 .header-info h1 {
@@ -61,7 +123,7 @@ h2, h4, p {
   align-items: flex-end;
 }
 
-div.about-me {
+div.summary {
   display: flex;
   background-color: #dedede;
   height: 220px;
@@ -71,18 +133,19 @@ div.about-me {
   text-align: justify;
   align-items: center;
 }
-div.about-me p {
+div.summary p {
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
   line-height: 1.6;
+  width: auto;
 }
-div.about-me .about-me-icons {
+div.summary .summary-icons {
   display: flex;
   justify-content: space-evenly;
   height: 60px;
   width: 350px;
 }
-div.about-me img {
+div.summary img {
   width: 13%;
 }
 
@@ -93,6 +156,9 @@ div.projects {
 }
 div.projects h1 {
   text-align: center;
+}
+div.projects p {
+  line-height: 1.6;
 }
 div.projects .card:nth-of-type(1) {
   align-self: center;
@@ -106,7 +172,7 @@ div.projects .card-container {
 div.projects .card {
   box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 90%;
+  width: 306px;
   border-radius: 5px;
   margin: 15px;
 }
@@ -131,9 +197,9 @@ div.skills {
   align-items: center;
   background-color: rgba(68, 44, 100, 0.85);
   color: white;
-  padding: 100px 30px;
+  padding: 60px 30px;
   height: 166px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 div.skills img {
   width: 13%;
@@ -146,6 +212,7 @@ div.skills .skills-icons {
   justify-content: space-evenly;
   height: 60px;
   width: 350px;
+  margin-bottom: 14.74px;
 }
 
 div.contact {
@@ -153,9 +220,9 @@ div.contact {
   flex-direction: column;
   align-items: center;
   background-color: #dedede;
-  padding: 100px 30px;
+  padding: 60px 30px;
   height: 166px;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 div.contact img {
   width: 13%;
@@ -165,7 +232,7 @@ div.contact .contact-icons {
   justify-content: space-evenly;
   height: 60px;
   width: 350px;
-  padding-top: 34px;
+  margin-bottom: 14.74px;
 }
 
 @media (min-width: 700px) {
@@ -174,27 +241,33 @@ div.contact .contact-icons {
     align-items: center;
   }
 
+  h1 {
+    font-size: 35px;
+  }
+
   .header-info {
     justify-content: space-evenly;
-    width: auto;
+    width: 550px;
   }
   .header-info h1 {
     font-size: 45px;
   }
+  .header-info h2 {
+    font-size: 22px;
+    padding-bottom: 11px;
+  }
 
-  div.about-me {
+  div.summary {
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  div.about-me .about-me-content {
-    width: 550px;
-  }
-  div.about-me img {
+  div.summary img {
     height: 100%;
   }
-  div.about-me p {
-    width: 50%;
+  div.summary p {
+    font-size: 22px;
+    width: 70%;
   }
 
   div.projects {
@@ -202,10 +275,6 @@ div.contact .contact-icons {
   }
   div.projects .card-container {
     flex-direction: row;
-    width: 690px;
-  }
-  div.projects .card {
-    width: 70%;
   }
 }
 
