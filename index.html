@@ -10,21 +10,50 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto|Open+Sans:300" rel="stylesheet">
 </head>
 <body>
+
     <!-- HEADER -->
     <header>
-        <div class="header-menu">
+        <!-- <div class="header-menu">
             <ul class="menu">
                 <li>About</li>
                 <li>Projects</li>
                 <li>Contact</li>
             </ul>
-        </div>
+        </div> -->
+        <nav role="navigation">
+                <div id="menuToggle">
+                <!--
+                A fake / hidden checkbox is used as click reciever,
+                so you can use the :checked selector on it.
+                -->
+                <input type="checkbox" />
+                
+                <!--
+                Some spans to act as a hamburger.
+                
+                They are acting like a real hamburger,
+                not that McDonalds stuff.
+                -->
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                <!--
+                Too bad the menu has to be inside of the button
+                but hey, it's pure CSS magic.
+                -->
+                <ul id="menu">
+                    <a href="#home"><li>Home</li></a>
+                    <!-- <a href="#"><li>About</li></a> -->
+                    <a href="#projects"><li>Projects</li></a>
+                    <a href="#skills"><li>Contact</li></a>
+                </ul>
+                </div>
+        </nav>
+        
         <div class="header-info">
-            <img src="images/profile-pic.png" alt="Profile image" class="image-big">
-            <!-- <img src="images/profile-pic-small-2.png" alt="Profile image" class="image-small"> -->
-            <img src="images/profile-pic-small.png" alt="Profile image" class="image-small">
+            <img src="images/profile-pic-small.png" alt="Profile image" class="profile-image-top">
             <div>
-                <!-- <h1>Luigino <br/> De Leon</h1> -->
                 <a href="index.html"><h1>Luigino De Leon</h1></a>
                 <h2>Web Developer</h2>
             </div>
@@ -32,7 +61,9 @@
     </header>
 
     <!-- SUMMARY -->
+    <div id="home"></div>
     <div class="summary">
+            <img src="images/profile-pic-small.png" alt="Profile image" class="profile-image-bottom">
             <p>Currently living in Sydney and working my way towards becoming a Full-Stack dev. I'm also keen on volleyball, gaming and fashion.</p>
         <!-- <div class="about-me-content"> -->
             <!-- <p>Currently living in Sydney and working my way towards becoming a Full-Stack dev. I'm also keen on volleyball, gaming and fashion.</p> -->
@@ -46,6 +77,7 @@
 
     <!-- PROJECTS -->
     <div class="projects">
+        <div id="projects"></div>
         <h1>Projects</h1>
         <div class="card-container">
             <a href="hangman.html"><div class="card">
@@ -56,10 +88,10 @@
                 </div>
             </div></a>
             <div class="card">
-                    <img src="images/banking-2.png" alt="Avatar">
+                    <img src="images/housecats-image.png" alt="">
                     <div class="container">
-                        <h4><b>Banking Terminal App</b></h4> 
-                        <p>A simple terminal app that can process bank transactions</p> 
+                        <h4><b>Housecats Volleyball Club</b></h4> 
+                        <p>Coming Soon</p> 
                     </div>
             </div>
         </div>  
@@ -67,13 +99,13 @@
 
     <!-- SKILLS -->
     <div class="skills">
+        <div id="skills"></div>
         <h1>Skills</h1>
-        <!-- <div class="front-end-skills"> -->
         <div class="skills-icons">
             <img src="images/html-5.svg" alt="">
             <img src="images/css-3.svg" alt="">
             <img src="images/javascript.svg" alt="">
-            <img src="images/gem4.svg" alt="">
+            <img src="images/gem.svg" alt="">
         </div>
             <!-- <p>HTML, CSS, Javascript and Ruby</p> -->
         <!-- </div> -->

@@ -12,20 +12,49 @@
 <body>
     <!-- HEADER -->
     <div class="project-wrapper">
-        <header>
-            <div class="header-info">
-                <img src="images/profile-pic.png" alt="Profile image" class="image-big">
-                <img src="images/profile-pic-small.png" alt="Profile image" class="image-small">
-                <div>
-                    <a href="index.html"><h1>Luigino De Leon</h1></a>
-                    <h2>Web Developer</h2>
+    <header>
+        <nav role="navigation">
+                <div id="menuToggle">
+                <!--
+                A fake / hidden checkbox is used as click reciever,
+                so you can use the :checked selector on it.
+                -->
+                <input type="checkbox" />
+                
+                <!--
+                Some spans to act as a hamburger.
+                
+                They are acting like a real hamburger,
+                not that McDonalds stuff.
+                -->
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                <!--
+                Too bad the menu has to be inside of the button
+                but hey, it's pure CSS magic.
+                -->
+                <ul id="menu">
+                    <a href="index.html#home"><li>Home</li></a>
+                    <!-- <a href="#"><li>About</li></a> -->
+                    <a href="index.html#projects"><li>Projects</li></a>
+                    <a href="index.html#skills"><li>Contact</li></a>
+                </ul>
                 </div>
+        </nav>
+        <div class="header-info">
+            <img src="images/profile-pic-small.png" alt="Profile image" class="profile-image-top">
+            <div>
+                <a href="index.html"><h1>Luigino De Leon</h1></a>
+                <h2>Web Developer</h2>
             </div>
-        </header>
+        </div>
+    </header>
 
         <!-- SUMMARY -->
         <div class="summary">
-            <p>A command-line version of the classic Hangman game with a database of words based on popular TV shows and movies.</p>
+            <p>A command-line version of the classic Hangman game, featuring a database of words based on popular TV shows and movies.</p>
             <div class="summary-icons">
                 <img src="images/hangman-icon.svg" alt="">
                 <img src="images/cmd-line.svg" alt="">
@@ -54,7 +83,7 @@
         <div class="tech">
             <h1>Technology Used</h1>
             <div class="tech-icons">
-                <img src="images/gem4.svg" alt="">
+                <img src="images/gem.svg" alt="">
                 <img src="images/github-white.svg" alt="">
             </div>
                 <p>The whole application was developed using Ruby with the use of the Faker gem to create the database of words.</p>

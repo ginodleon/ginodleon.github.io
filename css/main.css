@@ -23,9 +23,6 @@ div.tech .tech-icons {
   height: 60px;
   width: 350px;
 }
-div.tech p {
-  align-self: flex-start;
-}
 
 .projects {
   align-items: center;
@@ -46,6 +43,14 @@ div.tech p {
     width: 500px;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.profile-image-top {
+  display: none;
+}
+
 .header-menu {
   display: none;
 }
@@ -63,12 +68,10 @@ a {
   /* no underline */
 }
 
-a:visited {
-  color: white;
-}
-
 header {
-  display: flex;
+  /* display: flex; */
+  position: fixed;
+  /* top: -49px; */
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -90,16 +93,136 @@ p {
   line-height: 1.6;
 }
 
-h2, h4, p {
+h2, h4, p, nav {
   font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  /*
+  * Burgermenu made by Erik Terwan
+  * 24th of November 2015
+  * MIT license
+  *
+  *
+  * If you are thinking of using this in
+  * production code, beware of the browser
+  * prefixes.
+  */
+  overflow-x: hidden;
+  /* needed because hiding the menu on the right side is not perfect,  */
+  /*
+  * Just a quick hamburger
+  */
+  /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+  /*
+  * But let's hide the middle one.
+  */
+  /*
+  * Oh yeah and the last one should go the other direction
+  */
+  /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+  /*
+  * And let's fade it in from the left
+  */
+}
+nav a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: rgba(68, 44, 100, 0.85);
+}
+nav #menuToggle {
+  display: block;
+  position: fixed;
+  top: 40px;
+  right: 30px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+nav #menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+nav #menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+nav #menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+nav #menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+nav #menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+nav #menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+nav #menuToggle input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+nav #menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+nav #menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+nav #menuToggle input:checked ~ ul {
+  transform: scale(1, 1);
+  opacity: 1;
 }
 
 .header-info {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 400px;
-  margin-top: 70px;
+  margin: 10px 0px 10px 20px;
+}
+.header-info a:visited {
+  color: white;
 }
 .header-info h1 {
   font-size: 30px;
@@ -108,26 +231,28 @@ h2, h4, p {
   padding-top: 10px;
 }
 .header-info h2 {
-  padding-bottom: 0px;
-  color: black;
+  padding-bottom: 10px;
+  color: white;
   margin: 0;
-}
-.header-info .image-small {
-  border-radius: 50%;
-  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
-  margin-top: 0px;
 }
 .header-info div {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
+}
+.header-info img {
+  border-radius: 50%;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 0px;
+  width: 100px;
+  height: 100px;
 }
 
 div.summary {
   display: flex;
   background-color: #dedede;
-  height: 220px;
-  padding: 60px 30px;
+  height: auto;
+  padding: 143px 30px 60px 30px;
   flex-direction: column;
   justify-content: space-evenly;
   text-align: justify;
@@ -148,13 +273,25 @@ div.summary .summary-icons {
 div.summary img {
   width: 13%;
 }
+div.summary .profile-image-bottom {
+  border-radius: 50%;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 0px;
+  width: 100px;
+  height: 100px;
+}
 
 div.projects {
   display: flex;
   padding: 60px 30px;
   flex-direction: column;
 }
+div.projects #projects {
+  position: relative;
+  top: -160px;
+}
 div.projects h1 {
+  margin-top: 0;
   text-align: center;
 }
 div.projects p {
@@ -169,12 +306,17 @@ div.projects .card-container {
   align-items: center;
   padding-bottom: 14.75px;
 }
+div.projects .card-container a:visited {
+  color: black;
+}
 div.projects .card {
   box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 306px;
+  height: 370px;
   border-radius: 5px;
   margin: 15px;
+  background-color: rgba(68, 44, 100, 0.4);
 }
 div.projects .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -186,7 +328,6 @@ div.projects img {
   width: 100%;
 }
 div.projects .container {
-  background-color: rgba(68, 44, 100, 0.3);
   border-radius: 0px 0px 5px 5px;
   padding: 2px 16px;
 }
@@ -236,18 +377,33 @@ div.contact .contact-icons {
 }
 
 @media (min-width: 700px) {
+  .profile-image-top {
+    display: block;
+  }
+
+  .profile-image-bottom {
+    display: none;
+  }
+
   header {
-    justify-content: center;
-    align-items: center;
+    height: 150px;
   }
 
   h1 {
     font-size: 35px;
   }
 
+  nav #menuToggle {
+    top: 65px;
+    right: 45px;
+  }
+
   .header-info {
-    justify-content: space-evenly;
-    width: 550px;
+    margin: 20px 0px 10px 40px;
+  }
+  .header-info div {
+    align-items: flex-start;
+    padding-left: 20px;
   }
   .header-info h1 {
     font-size: 45px;
@@ -261,17 +417,21 @@ div.contact .contact-icons {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 206px 30px 80px 30px;
   }
   div.summary img {
     height: 100%;
   }
   div.summary p {
     font-size: 22px;
-    width: 70%;
+    width: 725px;
   }
 
   div.projects {
     align-items: center;
+  }
+  div.projects #projects {
+    top: -210px;
   }
   div.projects .card-container {
     flex-direction: row;
