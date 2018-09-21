@@ -221,7 +221,7 @@ nav #menuToggle input:checked ~ ul {
   display: flex;
   margin: 10px 0px 10px 20px;
 }
-.header-info a:visited {
+.header-info a {
   color: white;
 }
 .header-info h1 {
@@ -306,7 +306,7 @@ div.projects .card-container {
   align-items: center;
   padding-bottom: 14.75px;
 }
-div.projects .card-container a:visited {
+div.projects .card-container a {
   color: black;
 }
 div.projects .card {
