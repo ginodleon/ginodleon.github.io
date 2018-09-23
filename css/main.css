@@ -27,6 +27,9 @@ div.tech .tech-icons {
 .projects {
   align-items: center;
 }
+.projects .Github-icon {
+  width: 44.5px;
+}
 .projects .project-img {
   width: 315px;
   box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.2);
@@ -65,13 +68,10 @@ header div {
 
 a {
   text-decoration: none;
-  /* no underline */
 }
 
 header {
-  /* display: flex; */
   position: fixed;
-  /* top: -49px; */
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -81,7 +81,7 @@ header {
 
 h1 {
   font-size: 27px;
-  font-family: "Roboto Slab", serif;
+  font-family: "Roboto", serif;
 }
 
 h2 {
@@ -238,7 +238,6 @@ nav #menuToggle input:checked ~ ul {
 .header-info div {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end; */
 }
 .header-info img {
   border-radius: 50%;
@@ -365,7 +364,7 @@ div.contact {
   height: 166px;
   justify-content: space-evenly;
 }
-div.contact img {
+div.contact a {
   width: 13%;
 }
 div.contact .contact-icons {

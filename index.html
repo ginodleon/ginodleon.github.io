@@ -7,48 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto|Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Open+Sans:300" rel="stylesheet">
 </head>
 <body>
 
     <!-- HEADER -->
     <header>
-        <!-- <div class="header-menu">
-            <ul class="menu">
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul>
-        </div> -->
         <nav role="navigation">
-                <div id="menuToggle">
-                <!--
-                A fake / hidden checkbox is used as click reciever,
-                so you can use the :checked selector on it.
-                -->
-                <input type="checkbox" />
-                
-                <!--
-                Some spans to act as a hamburger.
-                
-                They are acting like a real hamburger,
-                not that McDonalds stuff.
-                -->
-                <span></span>
-                <span></span>
-                <span></span>
-                
-                <!--
-                Too bad the menu has to be inside of the button
-                but hey, it's pure CSS magic.
-                -->
-                <ul id="menu">
-                    <a href="#home"><li>Home</li></a>
-                    <!-- <a href="#"><li>About</li></a> -->
-                    <a href="#projects"><li>Projects</li></a>
-                    <a href="#skills"><li>Contact</li></a>
-                </ul>
-                </div>
+            <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox" />
+            
+            <!--
+            Some spans to act as a hamburger.
+            
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+            <span></span>
+            <span></span>
+            <span></span>
+            
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul id="menu">
+                <a href="#home"><li>Home</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#skills"><li>Contact</li></a>
+            </ul>
+            </div>
         </nav>
         
         <div class="header-info">
@@ -63,16 +55,19 @@
     <!-- SUMMARY -->
     <div id="home"></div>
     <div class="summary">
-            <img src="images/profile-pic-small.png" alt="Profile image" class="profile-image-bottom">
-            <p>Currently living in Sydney and working my way towards becoming a Full-Stack dev. I'm also keen on volleyball, gaming and fashion.</p>
-        <!-- <div class="about-me-content"> -->
-            <!-- <p>Currently living in Sydney and working my way towards becoming a Full-Stack dev. I'm also keen on volleyball, gaming and fashion.</p> -->
-            <div class="summary-icons">
-                <img src="images/volleyball.svg" alt="">
-                <img src="images/game-controller.svg" alt="">
-                <img src="images/hoodie.svg" alt="">
-            </div>
-        <!-- </div> -->
+        <img src="images/profile-pic-small.png" alt="Profile image" class="profile-image-bottom">
+        <p>Currently living in Sydney and working my way towards becoming a Full-Stack dev. 
+        <br>
+        <br>
+        I graduated from the University of Technology Sydney with a Bachelor of Science in IT and I am currently working in retail while studying Full-Time at Coder Academy.
+        <br>
+        <br>
+        I'm also keen on volleyball, gaming and fashion.</p>
+        <div class="summary-icons">
+            <img src="images/volleyball.svg" alt="Volleyball Icon">
+            <img src="images/game-controller.svg" alt="Game controller icon">
+            <img src="images/hoodie.svg" alt="Hoodie icon">
+        </div>
     </div>
 
     <!-- PROJECTS -->
@@ -81,14 +76,14 @@
         <h1>Projects</h1>
         <div class="card-container">
             <a href="hangman.html"><div class="card">
-                <img src="images/hangman-1.png" alt="Avatar">
+                <img src="images/hangman-1.png" alt="Hangman Project Image">
                 <div class="container">
                     <h4><b>Hangman Terminal Game</b></h4> 
                     <p>A fun take on a classic game with a modern twist</p> 
                 </div>
             </div></a>
             <div class="card">
-                    <img src="images/housecats-image.png" alt="">
+                    <img src="images/housecats-image.png" alt="Housecats Project Image">
                     <div class="container">
                         <h4><b>Housecats Volleyball Club</b></h4> 
                         <p>Coming Soon</p> 
@@ -102,26 +97,20 @@
         <div id="skills"></div>
         <h1>Skills</h1>
         <div class="skills-icons">
-            <img src="images/html-5.svg" alt="">
-            <img src="images/css-3.svg" alt="">
-            <img src="images/javascript.svg" alt="">
-            <img src="images/gem.svg" alt="">
+            <img src="images/html-5.svg" alt="HTML5 Icon">
+            <img src="images/css-3.svg" alt="CSS3 Icon">
+            <img src="images/javascript-plain.svg" alt="Javascript Icon">
+            <img src="images/gem.svg" alt="Ruby Icon">
         </div>
-            <!-- <p>HTML, CSS, Javascript and Ruby</p> -->
-        <!-- </div> -->
     </div>
 
     <!-- CONTACT ME -->
     <div class="contact">
         <h1>Contact</h1>
         <div class="contact-icons">
-            <img src="images/gmail.svg" alt="">
-            <img src="images/github.svg" alt="">
-            <img src="images/linkedin.svg" alt="">
-            <!-- <img src="images/html-5.svg" alt="">
-            <img src="images/css-3.svg" alt="">
-            <img src="images/javascript.svg" alt="">
-            <img src="images/ruby.svg" alt=""> -->
+            <a href="mailto:ginodleon@gmail.com"><img src="images/gmail.svg" alt="Email me icon"></a>
+            <a href="https://github.com/ginodleon" target="_blank"><img src="images/github.svg" alt="Github Icon"></a>
+            <a href="https://www.linkedin.com/in/luigino-de-leon-603a60101/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn Icon"></a>
         </div>
     </div>
 </body>
